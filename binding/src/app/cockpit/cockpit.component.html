@@ -7,7 +7,7 @@
     <input type="text" class="form-control">
     <br>
     <button (click)="onServerAdded()" class="btn btn-primary">Add Server</button>
-    <button class="btn btn-primary">Add blueprint</button>
+    <button (click)="onServerAdded()" class="btn btn-primary">Add blueprint</button>
     <p [hidden]="!isServerAdded"> server was added</p>
     <p [hidden]="isServerAdded">Server is not added yet</p>
   </div>
