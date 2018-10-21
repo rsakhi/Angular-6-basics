@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CockpitComponent implements OnInit {
 
+  isServerAdded:boolean = false
   constructor() { }
 
   ngOnInit() {
   }
 
+  onServerAdded(){
+    this.isServerAdded = true
+  }
 }
