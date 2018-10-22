@@ -3,10 +3,10 @@ Access and Manupulate DOM
         [(ngModal)]="< PropertyName >"
 
 2. Local reference in template
-        #<localRefName>
+        #< localRefName >
     
 3. ViewChild decorator
-        @ViewChild('<selectoreName>') <propertyname>
+        @ViewChild('< selectoreName >') <propertyname>
 
 -> @ViewChild is use to access DOM
 
