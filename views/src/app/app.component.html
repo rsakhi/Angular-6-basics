@@ -1,0 +1,8 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container">
+  <app-cockpit
+    (serverCreated)="onServerAdded($event)"></app-cockpit>
+  <app-server 
+    *ngFor="let server of servers"
+    [element]="server" ></app-server>
+</div>

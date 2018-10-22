@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="col-xs-12">
+    <p>Add new server</p>
+    <label>Server name</label>
+    <input 
+      class="form-control"
+      [(ngModel)]="serverName">
+
+    <label>bluePrint Name</label>
+    <input 
+      type="text" 
+      class="form-control"
+      [(ngModel)]="serverContaint">
+      
+    <br>
+    <button
+      class="btn btn-primary"
+      (click)="onServerAdded()" >Add Server</button>
+  
+    <p [hidden]="!isServerAdded"> server was added</p>
+    <p [hidden]="isServerAdded">Server is not added yet</p>
+  </div>
+</div>
