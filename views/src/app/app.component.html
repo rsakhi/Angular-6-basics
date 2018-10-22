@@ -4,5 +4,12 @@
     (serverCreated)="onServerAdded($event)"></app-cockpit>
   <app-server 
     *ngFor="let server of servers"
-    [element]="server" ></app-server>
+    [element]="server" >
+    <div class="panel-heading">{{server.name}}</div>
+    <div class="panel-body">
+      <p>
+        <strong>{{server.content}}</strong>
+      </p>
+    </div>
+  </app-server>
 </div>
