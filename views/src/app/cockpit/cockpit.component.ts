@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter} from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-cockpit',
@@ -7,8 +7,10 @@ import { Component, OnInit, Output, EventEmitter} from '@angular/core';
 })
 export class CockpitComponent implements OnInit {
   @Output() serverCreated = new EventEmitter<{name: String, containt:String}>();
-  serverName:String="";
-  serverContaint:String="";
+  // serverName:String=""; no need since we are using local ref
+  // serverContaint:String="";
+  
+  @ViewChild('serverContentInput') serverContent; 
 
   isServerAdded:boolean = false
   constructor() { }
@@ -19,7 +21,7 @@ export class CockpitComponent implements OnInit {
   onServerAdded(serverNameInput){
     this.serverCreated.emit({
       name: serverNameInput.value,
-      containt: this.serverContaint
+      containt: this.serverContent.nativeElement.value
     })
     this.isServerAdded = true
   }

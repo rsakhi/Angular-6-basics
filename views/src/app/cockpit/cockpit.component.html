@@ -6,18 +6,23 @@
     <input 
       class="form-control"
       #serverNameInput>
-    {{serverNameInput.value}}
+      {{serverNameInput.value}}
+
     <label>bluePrint Name</label>
+    
+
+    <!-- Using @viewChild Decorator  -->
     <input 
       type="text" 
       class="form-control"
-      [(ngModel)]="serverContaint">
-      {{serverContaint}}
+      #serverContentInput>
+      {{serverContent.nativeElement.value}}
+
     <br>
     <button
       class="btn btn-primary"
       (click)="onServerAdded(serverNameInput)" >Add Server</button>
-  
+
     <p [hidden]="!isServerAdded"> server was added</p>
     <p [hidden]="isServerAdded">Server is not added yet</p>
   </div>
