@@ -1,6 +1,6 @@
 Access and Manupulate DOM 
 1. Two way binding 
-        [(ngModal)]="<PropertyName>"
+        [(ngModal)]="< PropertyName >"
 
 2. Local reference in template
         #<localRefName>
