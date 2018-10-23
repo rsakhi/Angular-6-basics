@@ -8,9 +8,11 @@
 		</div>
 	</div>
 	<div *ngIf="!showEven">
-			<div *ngFor="let odd of oddNumber">
-				{{odd}}
-				<hr>
-			</div>
+		<div [ngStyle]= "{backgroundColor: 'yellow'}" *ngFor="let odd of oddNumber">
+			{{odd}}
+			<hr>
 		</div>
+	</div>
+	<p appCustomDirective>Hello its a Custom Directive
+	</p>
 </div>
