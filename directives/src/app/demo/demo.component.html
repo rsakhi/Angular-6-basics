@@ -1,0 +1,16 @@
+<div class="col-md-12">
+	<button (click)="showEven = true" class="btn btn-primary">Show even</button>
+	<button (click)="showEven = false" class="btn btn-primary">Show odd</button>
+	<div *ngIf="showEven">
+		<div *ngFor="let even of evenNumber">
+			{{even}}
+			<hr>
+		</div>
+	</div>
+	<div *ngIf="!showEven">
+			<div *ngFor="let odd of oddNumber">
+				{{odd}}
+				<hr>
+			</div>
+		</div>
+</div>
