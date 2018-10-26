@@ -4,11 +4,11 @@ import { Directive, ElementRef, OnInit } from "@angular/core";
 	selector: "[appCustomDirective]"
 })
 
-export class CustomDirective implements OnInit{
-	constructor(private eleRef: ElementRef){
+export class CustomDirective implements OnInit {
+	constructor(private eleRef: ElementRef) {
 	}
 
-	ngOnInit(){
+	ngOnInit() {
 		this.eleRef.nativeElement.style.backgroundColor = "red"
 	}
 }
